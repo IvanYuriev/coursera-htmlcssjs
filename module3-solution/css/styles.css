@@ -13,7 +13,7 @@ body {
 }
 
 #logo-img{
-	background: url('../images/cafe-logo-large.png') no-repeat;
+	background: url('../images/logo-large.png') no-repeat;
 	width: 150px;
 	height: 150px;
 	margin:  10px 15px 10px 0px;
@@ -59,6 +59,7 @@ body {
 
 #nav-list {
 	margin-top: 10px;
+	justify-content: flex-end;
 }
 
 #nav-list a {
@@ -98,17 +99,109 @@ body {
 }
 
 
-@media (min-width: 1200px) {
+/* MAIN page content styles */
+#main-content{
+	margin-top: 30px;
+}
 
+.container .jumbotron {
+	border: 1px solid grey;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#menu-tile, #specials-tile, #map-tile { 
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 5px rgba(255,255,255,0.5);
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+	background-color: red;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	opacity: .7;
+	background-color: #000;
+	color: white;
+}
+
+#menu-tile {
+	background: url("../images/menu-tile.jpg") no-repeat;
+	background-position: center;
+}
+#specials-tile {
+	background: url("../images/specials-tile.jpg") no-repeat;
+	background-position: center;
+}
+/* END of MAIN page */
+
+
+/* FOOTER panel */
+
+.panel-footer {
+	margin-top: 40px;
+	padding: 35px 0px 10px 0px;
+	background-color: #555;
+	border-top: 0;
+	font-size: 14px;
+}
+
+.panel-footer .text-center {
+	margin-top: 35px;
+}
+
+#hours, #address {
+	line-height: 2;
+}
+
+#hours > span, #address > span {
+	font-size: 1.2em;
+	text-decoration: underline;
+}
+
+#about {
+	font-style: italic;
+}
+
+#about p:nth-child(3) {
+	font-size: 0.8em;
+	margin-top: 30px;
+}
+
+.panel-footer hr {
+	background-color: lightgrey;
+	height: 1px;
+	width: 50%;
+}
+/* END of FOOTER panel */
+
+@media (min-width: 1200px) {
+	.container .jumbotron {
+		background: url("../images/leaves-1200.jpg") no-repeat;
+		height: 800px;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-	
+	.container .jumbotron {
+		background: url("../images/leaves-992.jpg") no-repeat;
+		height: 661px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
 	#logo-img {
-		background: url('../images/cafe-logo-large.png') no-repeat;
+		background: url('../images/logo-medium.png') no-repeat;
 		width: 100px;
 		height: 100px;
 		margin:  5px 5px 5px 0px;
@@ -117,9 +210,14 @@ body {
 	div.container {
 		max-width: 100%;
 	}
+
+	.container .jumbotron {
+		background: url("../images/leaves-992.jpg") no-repeat;
+		height: 661px;
+	}
 }
 
-@media (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767px) {
 
 	div.container {
 		max-width: 100%;
@@ -149,4 +247,44 @@ body {
 		font-size: 1em;
 		margin-right: 5px;
 	}
+
+	.container .jumbotron {
+		background: url("../images/leaves-768.jpg") no-repeat;
+		height: 512px;
+	}
 }
+
+@media (max-width: 575px) {
+	.container .jumbotron {
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	#menu-tile, #specials-tile, #map-tile { 
+		width: 385px;
+		margin: 0 auto 15px auto;
+	}
+
+	.panel-footer section {
+		text-align: center;
+	}
+
+	.panet-footer section:nth-child(3) {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 479px) {
+	.navbar-brand h1 {
+		font-size: 7vw;
+	}
+	.navbar-brand span {
+		font-size: 5vw;
+	}
+
+	#menu-tile, #specials-tile, #map-tile { 
+		width: 280px;
+		margin: 0 auto 15px auto;
+	}
+}
+

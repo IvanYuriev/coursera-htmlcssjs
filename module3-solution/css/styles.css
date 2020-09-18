@@ -10,6 +10,8 @@ body {
 	background-color: #f6b319;
 	border-radius: 0;
 	border: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 #logo-img{
@@ -20,7 +22,7 @@ body {
 }
 
 .navbar-brand {
-	padding-top: 25px;
+	padding-top: 15px;
 }
 
 .navbar-brand h1 {
@@ -31,6 +33,11 @@ body {
 	margin-top: 0;
 	margin-bottom: 0;
 	line-height: .75;
+}
+
+.navbar-brand p span {
+	font-size: 10px;
+	font-style: italic;
 }
 
 .navbar-brand a:hover, .navbar-brand a:focus{
@@ -44,25 +51,26 @@ body {
 	display: flex; align-items: center;
 }
 
-.navbar-toggler
+.d-sm-none, .custom-nav .navbar-toggler
 {
 	position: relative;
 	float: right;
 	margin-left: auto;
 }
 
-/*
-.navbar-brand p span {
-	vertical-align: middle;
+#menu-items
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
-*/
 
 #nav-list {
 	margin-top: 10px;
 	justify-content: flex-end;
 }
 
-#nav-list a {
+.d-sm-none, .custom-nav #nav-list a {
 	color: red;
 	text-align: center;
 	vertical-align: middle;
@@ -73,7 +81,8 @@ body {
 }
 
 #nav-list a span {
-	font-size: 1.8em;
+	font-size: 1.2em;
+	padding-right: 5px;
 }
 
 #phone {
@@ -104,45 +113,52 @@ body {
 	margin-top: 30px;
 }
 
+#main-content h1 {
+	color: black;
+	margin-bottom: 50px;
+	font-size: 1.8em;
+}
+
 .container .jumbotron {
 	border: 1px solid grey;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 #menu-tile, #specials-tile, #map-tile { 
-	height: 250px;
+	background-color: #aaaaaa;
 	width: 100%;
 	margin-bottom: 15px;
 	position: relative;
 	overflow: hidden;
-}
-
-#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
-	box-shadow: 0 1px 5px 5px rgba(255,255,255,0.5);
+	border: 1px solid grey;
 }
 
 #menu-tile span, #specials-tile span, #map-tile span {
-	background-color: red;
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	right: 0;
 	text-align: center;
 	font-size: 1.5em;
 	text-transform: uppercase;
 	opacity: .7;
-	background-color: #000;
+	background-color: red;
 	color: white;
 }
 
-#menu-tile {
+#menu-tile p, #specials-tile p, #map-tile p {
+	margin-top: 40px;
+	padding: 0px 10px 5px 10px;
+}
+
+/*#menu-tile {
 	background: url("../images/menu-tile.jpg") no-repeat;
 	background-position: center;
 }
 #specials-tile {
 	background: url("../images/specials-tile.jpg") no-repeat;
 	background-position: center;
-}
+}*/
 /* END of MAIN page */
 
 
